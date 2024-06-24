@@ -7,7 +7,7 @@ ComplexNumber ComplexNumber::operator+(const ComplexNumber& other) const {
 }
 
 ComplexNumber ComplexNumber::operator-(const ComplexNumber& other) const {
-    return ComplexNumber(-real + other.real, -imagenary + other.imagenary);
+    return ComplexNumber(real - other.real, imagenary - other.imagenary);
 }
 
 ComplexNumber ComplexNumber::operator*(const ComplexNumber& other) const {

@@ -38,7 +38,7 @@ void MainWindow::on_pushButton_clicked()
 
     auto roots = solveQuadratic(a, b, c);
     QGraphicsScene *scene = new QGraphicsScene(ui->graphicsView);
-    QPen pen(Qt::white);
+    QPen pen(Qt::black);
     scene->addLine(0,90,180,90,pen);//x
     scene->addLine(90,0,90,180,pen);//y
     ui->graphicsView->setScene(scene);
@@ -72,7 +72,7 @@ void MainWindow::on_pushButton_2_clicked()
 
     auto roots = solveQuadratic(a, b, c);
     QGraphicsScene *scene = new QGraphicsScene(ui->graphicsView);
-    QPen pen(Qt::white);
+    QPen pen(Qt::black);
     scene->addLine(0,90,180,90,pen);//x
     scene->addLine(90,0,90,180,pen);//y
     ui->graphicsView->setScene(scene);

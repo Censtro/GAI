@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QLabel *cr = new QLabel(this);
-    cr->setText("®Gurinovich");
+    cr->setText("®Ablameyko");
     cr->setGeometry(0, 300, 300, 300);
 }
 

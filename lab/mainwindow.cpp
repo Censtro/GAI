@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QLabel *cr = new QLabel(this);
+    cr->setText("®ALEXEY ABLAMEYKO");
+    cr->setGeometry(0, 300, 300, 300);
 }
 
 MainWindow::~MainWindow()

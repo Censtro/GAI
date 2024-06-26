@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <fstream>
 #include <QLabel>
+#include <QLocale>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *cr = new QLabel(this);
     cr->setText("®Ablameyko");
     cr->setGeometry(0, 300, 300, 300);
+    QLocale::setDefault(QLocale(QLocale::Russian, QLocale::Russia));
 }
 
 MainWindow::~MainWindow()
@@ -86,5 +88,18 @@ void MainWindow::on_pushButton_2_clicked()
     scene->addLine(a1*15+90,90-b1*15,c1*15+90,90-d1*15,pen2);
 
     ui->graphicsView->setScene(scene);
+}
+
+
+void MainWindow::on_lineEdit_editingFinished()
+{
+
+}
+
+
+void MainWindow::on_dateTimeEdit_dateTimeChanged(const QDateTime &dateTime)
+{
+    QString text = QString("%1 %2 года, %3 часов %4 минут %5 секунд").arg(QLocale().toString(dateTime.date(), QStringLiteral("d MMMM"))).arg(QLocale().toString(dateTime.date(), QStringLiteral("yyyy"))).arg(QLocale().toString(dateTime.time(), QStringLiteral("h"))).arg(QLocale().toString(dateTime.time(), QStringLiteral("m"))).arg(QLocale().toString(dateTime.time(), QStringLiteral("s")));
+    ui->lineEdit->setText(text);
 }
 

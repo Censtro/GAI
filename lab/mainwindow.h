@@ -24,9 +24,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
-    void on_lineEdit_editingFinished();
-
     void on_dateTimeEdit_dateTimeChanged(const QDateTime &dateTime);
+
+    void on_spinBox_textChanged(const QString &arg1);
+
+    void on_lineEdit_editingFinished();
 
 private:
     Ui::MainWindow *ui;
